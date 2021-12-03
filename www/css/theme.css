@@ -1,0 +1,51 @@
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.espaco{
+	margin-bottom:15px;
+}
+
+.sendmessage {
+	display: none;
+}
+
+.errormessage {
+	display: none;
+}
+
+a.hover {
+  text-decoration: none;
+}
+ul li a.dropdown-toggle:hover{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+ul li a.dropdown-toggle:focus{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#page-wrapper {
+  margin-top: -50px;
+}

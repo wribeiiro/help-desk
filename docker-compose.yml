@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+  php:
+    container_name: php_help_desk
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8282:80"
+    volumes:
+      - ./www/:/var/www/html
+    networks:
+      - app-network
+
+  #MySQL Service
+  db:
+    container_name: mysql_help_desk
+    image: mysql:5.7
+    restart: always
+    ports: 
+      - "3309:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=help_desk
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_USER=hroot
+      - MYSQL_PASSWORD=root
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
